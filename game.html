@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Jeu : Addition / Soustraction / Multiplication</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+
+<body>
+
+	<h1>Jeu : Addition / Soustraction / Multiplication</h1>
+
+	<div id="contener">
+
+		<div id="more">
+
+			<h2 class="more">Informations</h2><br/>
+			<h4 class="n1">Niveau 1</h4><p class="n1"> : Uniquement des additions.</p><br/><br/>
+			<h4 class="n2">Niveau 2</h4><p class="n2"> : Uniquement des soustractions.</p><br/><br/>
+			<h4 class="n3">Niveau 3</h4><p class="n3"> : Additions et soustractions.</p><br/><br/>
+			<h4 class="n4">Niveau 4</h4><p class="n4"> : Uniquement des multiplications.</p><br/><br/>
+			<h4 class="n5">Niveau 5</h4><p class="n5"> : Additions, soustractions et multiplications.</p><br/><br/>
+
+		</div>
+
+		<div id="contenu">
+
+			<h2>Changer la difficulté</h2> :
+
+				<button id="niv1s" onclick="level='niv1';choixLevel()">Niveau 1</button>
+				<button id="niv2s" onclick="level='niv2';choixLevel()">Niveau 2</button>
+				<button id="niv3s" onclick="level='niv3';choixLevel()">Niveau 3</button>
+				<button id="niv4s" onclick="level='niv4';choixLevel()">Niveau 4</button>
+				<button id="niv5s" onclick="level='niv5';choixLevel()">Niveau 5</button>
+
+			<div id="operation">
+
+				<div id="opera">
+					<p id="optore"></p><input type="text" placeholder="Votre réponse..." id="rep" onkeydown="if (event.keyCode == 13) document.getElementById('togetrep').click()"><button id="togetrep" onclick="Calcul.calculer()">Valider</button>
+				</div>
+				<div id="info">
+					<p id="valid"></p>
+					<p id="attempt"></p>
+				</div>
+				<p id="score"></p>
+				<div id="pseudo">
+					<input type="text" id="enterpseudo" placeholder="Entrez votre pseudo..." onkeydown="if (event.keyCode == 13) document.getElementById('recscore').click()"><br/><br/>
+					<input type="button" id="recscore" value="Enregistrer mon score" onclick="Scoring.recScore()">
+				</div>
+			</div>
+
+			<button id="reset" onclick="reset()">Recommencer</button>
+
+		</div>
+
+		<div id="scores">
+			<h3>Tableau des scores</h3>
+			<p id="tabscores"></p>
+		</div>
+
+	</div>
+
+	<script src="game.js"></script>
+
+</body>
+
+</html>
