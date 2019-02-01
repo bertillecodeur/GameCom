@@ -68,7 +68,7 @@ var Operation = new Object({
 				this.op = Niveau4.operateur;
 				break;
 			case "niv5":
-				this.op = Niveau5.operateur;
+				this.op = Niveau5.creerOperateur();
 				break;
 			default:
 				this.op = " + ";
